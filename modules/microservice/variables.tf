@@ -42,6 +42,12 @@ variable "volume_size" {
   default     = 20
 }
 
+variable "instance_count" {
+  description = "Number of EC2 instances to launch"
+  type        = number
+  default     = 2
+}
+
 variable "desired_capacity" {
   description = "The desired number of instances in the Auto Scaling Group"
   type        = number
@@ -51,7 +57,7 @@ variable "desired_capacity" {
 variable "min_size" {
   description = "The minimum number of instances in the Auto Scaling Group"
   type        = number
-  default     = 1
+  default     = 2
 }
 
 variable "max_size" {

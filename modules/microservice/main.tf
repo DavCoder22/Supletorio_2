@@ -131,7 +131,7 @@ resource "aws_launch_template" "main" {
   }
 }
 
-# Auto Scaling Group
+# Auto Scaling Group with multiple instances
 resource "aws_autoscaling_group" "main" {
   name_prefix         = "${var.environment}-${var.name}-asg-"
   vpc_zone_identifier = var.subnet_ids

@@ -1,9 +1,9 @@
 require('dotenv').config();
 const express = require('express');
-const { startKafkaConsumer, startKafkaProducer } = require('./kafka');
-const { connectToMongoDB } = require('./database/mongodb');
-const { connectToMySQL } = require('./database/mysql');
-const logger = require('./utils/logger');
+const { startKafkaConsumer, startKafkaProducer } = require('./src/kafka');
+const { connectToMongoDB } = require('./src/database/mongodb');
+const { connectToMySQL } = require('./src/database/mysql');
+const logger = require('./src/utils/logger');
 
 const app = express();
 const PORT = process.env.PORT || 3001;

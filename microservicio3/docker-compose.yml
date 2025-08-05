@@ -98,13 +98,3 @@ services:
       - kafka
     networks:
       - time-network
-
-# Volumes
-db:
-  mongo-data:
-  mysql-data:
-
-# Networks
-networks:
-  time-network:
-    driver: bridge
