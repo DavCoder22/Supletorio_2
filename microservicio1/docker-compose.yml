@@ -1,0 +1,16 @@
+version: '3.8'
+
+services:
+  microservicio-hora:
+    build: .
+    container_name: microservicio-hora
+    ports:
+      - "3000:3000"
+    restart: unless-stopped
+    environment:
+      - NODE_ENV=production
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:3000/status"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
